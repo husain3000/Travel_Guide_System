@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter";
+}
+
+.glitch-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.glitch {
+  position: relative;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  letter-spacing: 4px;
+  z-index: 1;
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.glitch:before {
+  animation: glitch-color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #0ff;
+  z-index: -1;
+}
+
+.glitch:after {
+  animation: glitch-color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #ff00ff;
+  z-index: -2;
+}
+
+@keyframes glitch-color {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-3px, 3px);
+  }
+
+  40% {
+    transform: translate(-3px, -3px);
+  }
+
+  60% {
+    transform: translate(3px, 3px);
+  }
+
+  80% {
+    transform: translate(3px, -3px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.bg-img{
+    background:url('localhost:300/Photos/Kutch1.jpg');
+    height:100vh;
+    background-size:cover;
+    background-position: center;
+
+}
+.bg-img:after{
+    position:absolute;
+    content: '';
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100;
+    background: rgba(0,0,0,0.7);
+}
+.bg-img .content img{
+    max-width: 100px;
+}
+.content{
+    position:absolute;
+    top:62%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 999;
+    width:400px;
+    text-align:center;
+    padding: 60px 32px;
+    background: rgba(255,255,255,0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+.content header{
+    color:white;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 40px 0;
+    font-family: 'Poppins',sans-serif;
+}
+.field{
+
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background: rgba(255,255,255,0.94);
+    
+}
+.field span{
+    color: #222;
+    width: 40px;
+    line-height: 45px;
+}
+.field input{
+    height: 100%;
+    width: 100;
+    background: transparent;
+    border: none;
+    outline: none;
+    color:#222;
+    font-size:16px;
+    font-family: 'Poppins',sans-serif;
+}
+.show{
+    position: absolute;
+    right: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+    display: none;
+    font-family: 'Montserrat',sans-serif;
+
+}
+.content1{
+    position:absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 999;
+    width:470px;
+    text-align:center;
+    padding: 60px 32px;
+    background: rgba(255,255,255,0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+.content1 header{
+    color:white;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 40px 0;
+    font-family: 'Poppins',sans-serif;
+}
+.field{
+
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    background: rgba(255,255,255,0.94);
+    
+}
+.field span{
+    color: #222;
+    width: 40px;
+    line-height: 45px;
+}
+.field input{
+    height: 100%;
+    width: 100;
+    background: transparent;
+    border: none;
+    outline: none;
+    color:#222;
+    font-size:16px;
+    font-family: 'Poppins',sans-serif;
+}
+.show{
+    position: absolute;
+    right: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+    display: none;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.password:valid~.show{
+   display: block;
+}
+.space{
+    margin-top: 16px;
+}
+.pass{
+    text-align: right;
+    margin: 10px 0;
+}
+.pass a{
+    color: orange;
+    font-family:'Poppins',sans-serif;
+    text-decoration: none;
+   
+}
+.pass:hover a{
+    text-decoration: underline;
+}
+
+.field button{
+    margin: 10px 0 10px 0;
+    height: 20px;
+    width: 365px;
+    font-size: 20px;
+    color: blue;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid white;
+    transition: .5s;
+}
+
+
+.link span{
+    font-size: 16px;
+    margin-left: 8px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: 'Poppins',sans-serif;
+}
+.signup{
+    color: white;
+    
+    font-family: 'Poppins',sans-serif;
+}
+.signup a{
+    color: rgb(255, 149, 0);
+    text-decoration: none;
+    
+}
+.signup a:hover{
+    text-decoration: underline;
+}
+
+.content button{
+    margin: 10px 0 10px 0;
+    height: 45px;
+    width: 200px;
+    font-size: 20px;
+    color: white;
+    outline:none;
+    cursor: pointer;
+    font-weight: bold;
+    background: rgb(21, 21, 156);
+    border-radius: 3px;
+    border: 1px solid #3949AB;
+    transition: .5s;
+    }
+    
+.content1 button:hover{
+    background: #151c6a;
+    }
+
+    .content1 button{
+        margin: 10px 0 10px 0;
+        height: 45px;
+        width: 200px;
+        font-size: 20px;
+        color: white;
+        outline:none;
+        cursor: pointer;
+        font-weight: bold;
+        background: rgb(21, 21, 156);
+        border-radius: 3px;
+        border: 1px solid #3949AB;
+        transition: .5s;
+        }
+        
+    .content1 button:hover{
+        background: #151c6a;
+        }
+    
